@@ -59,27 +59,22 @@
           </div>
           <ul class="navbar-nav ms-auto ">
             <li class="nav-item">
-              <a class="nav-link mx-2 text-uppercase active" aria-current="page" href="#">Offers</a>
+              <a class="nav-link mx-2 text-uppercase active" aria-current="page" href="#">Ofertas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2 text-uppercase" href="#">Products</a>
+              <a class="nav-link mx-2 text-uppercase" href="#">Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2 text-uppercase" href="#">Catalog</a>
+              <a class="nav-link mx-2 text-uppercase" href="#">Servicios</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2 text-uppercase" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-2 text-uppercase" href="#">About</a>
-            </li>
+            
           </ul>
           <ul class="navbar-nav ms-auto ">
             <li class="nav-item">
-              <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-cart-shopping me-1"></i> Cart</a>
+              <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-cart-shopping me-1"></i> Carrito</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-circle-user me-1"></i> Account</a>
+              <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-circle-user me-1"></i> Mi cuenta</a>
             </li>
           </ul>
         </div>
@@ -109,20 +104,74 @@
           text-align: center;
           padding: 5px;
         }
+
       </style>
-      <div class="row">
-        <div class="card col-sm-2 card-body">
-          <p>Texto </p>
-          <img src="https://www.grapheverywhere.com/wp-content/uploads/2019/07/pic004.jpg" style="width: 300px"/>
-        </div>
-        <div class="card">
-          <p>Texto 2  </p>
-          <img src="https://www.grapheverywhere.com/wp-content/uploads/2019/07/pic004.jpg" style="width: 300px"/>
-        </div>
-      </div>
-      
-      
-    </div>
+      <section class='py-5'>
+        <div class='container px-4 px-lg-5 mt-5'>
+          <div class='row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 '>
+            
+            <div class='col mb-5'>
+              <div class="card">
+                <h5 class='card-header'> EDNL 1</h5>
+                <img class="card-img-top" src="https://www.grapheverywhere.com/wp-content/uploads/2019/07/pic004.jpg" />
+              </div>
+            </div>
+
+            <div class='col mb-5'>
+              <div class="card">
+                <h5 class='card-header'> EDNL 2</h5>
+                <img class="card-img-top" src="https://www.grapheverywhere.com/wp-content/uploads/2019/07/pic004.jpg" />
+              </div>
+            </div>
+
+            <div class='col mb-5'>
+              <div class="card">
+                <h5 class='card-header'> EDNL 3</h5>
+                <img class="card-img-top" src="https://www.grapheverywhere.com/wp-content/uploads/2019/07/pic004.jpg" />
+              </div>
+            </div>
+            
+            <div class='col mb-5'>
+              <div class="card">
+                <h5 class='card-header'> EDNL 4</h5>
+                <img class="card-img-top" src="https://www.grapheverywhere.com/wp-content/uploads/2019/07/pic004.jpg" />
+              </div>
+            </div>
+
+            <div class='col mb-5'>
+              <div class="card">
+                <h5 class='card-header'> EDNL 5</h5>
+                <img class="card-img-top" src="https://www.grapheverywhere.com/wp-content/uploads/2019/07/pic004.jpg" />
+              </div>
+            </div>
+
+            <div class='col mb-5'>
+              <div class="card">
+                <h5 class='card-header'> EDNL 6</h5>
+                <img class="card-img-top" src="https://www.grapheverywhere.com/wp-content/uploads/2019/07/pic004.jpg" />
+              </div>
+            </div>
+
+            <div class='col mb-5'>
+              <div class="card">
+                <h5 class='card-header'> EDNL 7</h5>
+                <img class="card-img-top" src="https://www.grapheverywhere.com/wp-content/uploads/2019/07/pic004.jpg" />
+              </div>
+            </div>
+
+            <div class='col mb-5'>
+              <div class="card">
+                <h5 class='card-header'> EDNL 8</h5>
+                <img class="card-img-top" src="https://www.grapheverywhere.com/wp-content/uploads/2019/07/pic004.jpg" />
+              </div>
+            </div>
+
+            
+
+          </div>
+
+          
+      </section>
 
   <!-- FOOTER -->
   </body>
