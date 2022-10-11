@@ -87,13 +87,46 @@
     </nav>
   </header>
   <body>
-  
-  
+    <style>
+      .imagen{
+        margin: 45px;
+      }
+      .GALERIA{
+        margin: 30px;
+        width: auto;
+        height: auto;
+        display: table;
+        overflow: auto;
+      }
+        .headerGaleria{
+          font-size: 20px;
+          max-width: 300px;
+          max-height: 50px;
+          margin: ;
+        }
+        .customTd{
+          font-size: 20px;
+          text-align: center;
+          padding: 5px;
+        }
+      </style>
+      <div class="row">
+        <div class="card col-sm-2 card-body">
+          <p>Texto </p>
+          <img src="https://www.grapheverywhere.com/wp-content/uploads/2019/07/pic004.jpg" style="width: 300px"/>
+        </div>
+        <div class="card">
+          <p>Texto 2  </p>
+          <img src="https://www.grapheverywhere.com/wp-content/uploads/2019/07/pic004.jpg" style="width: 300px"/>
+        </div>
+      </div>
+      
+      
+    </div>
 
   <!-- FOOTER -->
   </body>
-  <div class="container my-5">
-
+ 
   <footer class="fixed-bottom text-center text-lg-start text-white" style="background-color: rgba(253, 159, 23, 100)">
     <!-- Grid container -->
     <div class="container p-1" style="font-size: 13px">
