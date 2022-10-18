@@ -13,9 +13,6 @@
               </div>
             </div>
             @endfor
-
-          </div>
-
-          
+          </div>    
       </section>
 @endsection
