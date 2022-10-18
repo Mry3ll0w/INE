@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('templates.master')
 
 @section('contenido')
      <section class='py-5'>
