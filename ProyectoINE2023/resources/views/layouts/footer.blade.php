@@ -1,4 +1,4 @@
-<footer class="fixed-bottom text-center text-lg-start text-white" style="background-color: rgba(253, 159, 23, 100)">
+<footer class="footer mt-auto text-center text-lg-start text-white" style="background-color: rgba(253, 159, 23, 100)">
 
     <!-- Grid container -->
     <div class="container p-1" style="font-size: 13px">
