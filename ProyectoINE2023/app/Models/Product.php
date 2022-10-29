@@ -32,5 +32,10 @@ class Product extends Model
         
     }
     
+    public function HasDiscount(Product $p){
+        $sNow = date('Y-m-d H:i:s');
+
+        return ($p->discountPercent > 0) && ($p->discountStart_at <= $sNow && $sNow <= $p->discountEnd_at);
+    }
 
 }
