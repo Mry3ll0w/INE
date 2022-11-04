@@ -15,7 +15,10 @@
                   <h5 class='card-title d-flex justify-content-center'> {{$i->name}}</h5>
                   <img class="card-img-top mb-3" src="{{$i->imgUrl}}" />
                   <p class='card-text'>{{$i->description}} </p>
-                </div>
+                  <span class='d-flex justify-content-center'>
+                    <a href="product/{{$i->id}}" class="btn btn-primary">Detalles</a>
+                  </span>
+                  </div>
                 @if ($i->HasDiscount($i))
                   <h5 class="card-footer m-2 border d-flex justify-content-center">
                     <span style="text-decoration:line-through;">{{round($i->pricePerCredit * 6,2)}}€ </span>
@@ -27,9 +30,7 @@
                     <span style="font-weight:bold;">{{round($i->pricePerCredit * 6,2)}}€ </span>
                     
                 @endif
-                
-               
-                </div>
+              </div>
             </div>
             @endforeach
           </div>    

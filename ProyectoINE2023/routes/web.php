@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get("/", [ProductController::class, "welcome"])->name("home");
-
+Route::get('/product/{product}',
+    [ProductController::class, 'show'])->name('product.show');
 Route::middleware([
     "auth:sanctum",
     config("jetstream.auth_session"),
