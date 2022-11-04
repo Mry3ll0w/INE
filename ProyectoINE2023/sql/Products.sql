@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:8889
--- Tiempo de generación: 04-11-2022 a las 14:54:59
--- Versión del servidor: 5.7.34
--- Versión de PHP: 8.0.8
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 04-11-2022 a las 16:28:38
+-- Versión del servidor: 10.4.25-MariaDB
+-- Versión de PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,16 +18,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `ine22ara`
+-- Base de datos: `proyectoine2023`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Products`
+-- Estructura de tabla para la tabla `products`
 --
 
-CREATE TABLE `Products` (
+CREATE TABLE `products` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `company_id` bigint(20) UNSIGNED DEFAULT NULL,
   `name` varchar(256) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -42,23 +42,23 @@ CREATE TABLE `Products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `Products`
+-- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `Products` (`id`, `company_id`, `name`, `description`, `imgUrl`, `pricePerCredit`, `discountPercent`, `discountStart_at`, `discountEnd_at`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'EDNL', 'Estructura de Datos No Lineales, asignatura de complejidad avanzada, con respecto a la forma de evaluacion tu nota se decidira entre la media del resultado en un dado de 5 caras y el estado de la luna.', 'img/EDNL.png', 20.123, 0.00, '2022-10-25 00:00:00', '2022-11-25 00:00:00', '2022-10-27 04:57:27', '2022-10-27 04:57:27'),
-(2, NULL, 'AEED', 'Analisis De Algoritmos y Estructuras de Datos, esta asignatura te debería iniciar en C++ pero no lo hacemos, creemos que el aprobado solo existe a partir de la tercera matrícula', 'img/AEED.png', 30.541, 1.20, '2022-10-24 15:00:00', '2022-11-28 19:00:00', '2022-10-27 15:57:13', '2022-10-27 15:57:13'),
-(3, NULL, 'POO', 'Programación Orientada a Objetos, asignatura orientada a la enseñanza del paradigma de la programación orientada a objetos, aún siendo así no la impartimos en Java si no que en C++, a día de hoy por motivos aun no conclusos.', 'img/POO.png', 12.567, 3.00, '2022-10-02 15:00:00', '2022-11-28 19:00:00', '2022-10-27 15:57:13', '2022-10-27 15:57:13'),
-(4, NULL, 'DA', 'Diseño de Algoritmos, asignar muy bien llevada pero si te equivocas en una linea del código el ejercicio esta mal', 'img/DA.png', 10.567, 2.00, '2022-10-26 18:00:00', '2022-10-28 19:00:00', '2022-10-27 15:57:13', '2022-10-27 15:57:13');
+INSERT INTO `products` (`id`, `company_id`, `name`, `description`, `imgUrl`, `pricePerCredit`, `discountPercent`, `discountStart_at`, `discountEnd_at`, `created_at`, `updated_at`) VALUES
+(1, 5, 'EDNL', 'Estructura de Datos No Lineales, asignatura de complejidad avanzada, con respecto a la forma de evaluacion tu nota se decidira entre la media del resultado en un dado de 5 caras y el estado de la luna.', 'img/EDNL.png', 20.123, 0.00, '2022-10-25 00:00:00', '2022-11-25 00:00:00', '2022-10-27 02:57:27', '2022-10-27 02:57:27'),
+(2, 1, 'AEED', 'Analisis De Algoritmos y Estructuras de Datos, esta asignatura te debería iniciar en C++ pero no lo hacemos, creemos que el aprobado solo existe a partir de la tercera matrícula', 'img/AEED.png', 30.541, 1.20, '2022-10-24 15:00:00', '2022-11-28 19:00:00', '2022-10-27 13:57:13', '2022-10-27 13:57:13'),
+(3, 2, 'POO', 'Programación Orientada a Objetos, asignatura orientada a la enseñanza del paradigma de la programación orientada a objetos, aún siendo así no la impartimos en Java si no que en C++, a día de hoy por motivos aun no conclusos.', 'img/POO.png', 12.567, 3.00, '2022-10-02 15:00:00', '2022-11-28 19:00:00', '2022-10-27 13:57:13', '2022-10-27 13:57:13'),
+(4, NULL, 'DA', 'Diseño de Algoritmos, asignar muy bien llevada pero si te equivocas en una linea del código el ejercicio esta mal', 'img/DA.png', 10.567, 2.00, '2022-10-26 18:00:00', '2022-10-28 19:00:00', '2022-10-27 13:57:13', '2022-10-27 13:57:13');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `Products`
+-- Indices de la tabla `products`
 --
-ALTER TABLE `Products`
+ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
   ADD KEY `products_company_id_foreign` (`company_id`);
 
@@ -67,9 +67,9 @@ ALTER TABLE `Products`
 --
 
 --
--- AUTO_INCREMENT de la tabla `Products`
+-- AUTO_INCREMENT de la tabla `products`
 --
-ALTER TABLE `Products`
+ALTER TABLE `products`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
@@ -77,10 +77,10 @@ ALTER TABLE `Products`
 --
 
 --
--- Filtros para la tabla `Products`
+-- Filtros para la tabla `products`
 --
-ALTER TABLE `Products`
-  ADD CONSTRAINT `products_company_id_foreign` FOREIGN KEY (`company_id`) REFERENCES `Companies` (`id`);
+ALTER TABLE `products`
+  ADD CONSTRAINT `products_company_id_foreign` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

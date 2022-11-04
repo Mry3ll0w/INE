@@ -38,4 +38,8 @@ class Product extends Model
         return ($p->discountPercent > 0) && ($p->discountStart_at <= $sNow && $sNow <= $p->discountEnd_at);
     }
 
+    public function Company(){
+        return $this->belongsTo(Company::class);
+    }
+
 }
