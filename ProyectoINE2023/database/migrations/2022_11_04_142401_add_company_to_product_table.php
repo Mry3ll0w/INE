@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('Product', function (Blueprint $table) {
-            $table->unsignedBigInteger('company_id')->default(null);
-            $table->foreign('company_id')->references('id')->on('Company');
+        Schema::table('Products', function (Blueprint $table) {
+            $table->unsignedBigInteger('company_id')->nullable()->after('id');
+            $table->foreign('company_id')->references('id')->on('Companies');
         });
     }
 
@@ -26,7 +26,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('Product', function (Blueprint $table) {
+        Schema::table('Products', function (Blueprint $table) {
             //
         });
     }
