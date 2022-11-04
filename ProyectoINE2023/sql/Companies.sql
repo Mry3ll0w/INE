@@ -41,7 +41,7 @@ CREATE TABLE `companies` (
 INSERT INTO `companies` (`id`, `created_at`, `updated_at`, `name`) VALUES
 (1, '2022-11-04 15:12:00', '2022-11-04 15:12:00', 'SmokingMadMan S.L.'),
 (2, '2022-11-04 15:13:00', '2022-11-04 15:13:00', 'SkinnyPeter A.S.'),
-(5, '2022-11-04 15:14:00', '2022-11-04 15:14:00', 'OfTheOrchard GaoKao S.A.');
+(3, '2022-11-04 15:14:00', '2022-11-04 15:14:00', 'OfTheOrchard GaoKao S.A.');
 
 --
 -- Índices para tablas volcadas

@@ -46,10 +46,10 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `company_id`, `name`, `description`, `imgUrl`, `pricePerCredit`, `discountPercent`, `discountStart_at`, `discountEnd_at`, `created_at`, `updated_at`) VALUES
-(1, 5, 'EDNL', 'Estructura de Datos No Lineales, asignatura de complejidad avanzada, con respecto a la forma de evaluacion tu nota se decidira entre la media del resultado en un dado de 5 caras y el estado de la luna.', 'img/EDNL.png', 20.123, 0.00, '2022-10-25 00:00:00', '2022-11-25 00:00:00', '2022-10-27 02:57:27', '2022-10-27 02:57:27'),
-(2, 1, 'AEED', 'Analisis De Algoritmos y Estructuras de Datos, esta asignatura te debería iniciar en C++ pero no lo hacemos, creemos que el aprobado solo existe a partir de la tercera matrícula', 'img/AEED.png', 30.541, 1.20, '2022-10-24 15:00:00', '2022-11-28 19:00:00', '2022-10-27 13:57:13', '2022-10-27 13:57:13'),
-(3, 2, 'POO', 'Programación Orientada a Objetos, asignatura orientada a la enseñanza del paradigma de la programación orientada a objetos, aún siendo así no la impartimos en Java si no que en C++, a día de hoy por motivos aun no conclusos.', 'img/POO.png', 12.567, 3.00, '2022-10-02 15:00:00', '2022-11-28 19:00:00', '2022-10-27 13:57:13', '2022-10-27 13:57:13'),
-(4, NULL, 'DA', 'Diseño de Algoritmos, asignar muy bien llevada pero si te equivocas en una linea del código el ejercicio esta mal', 'img/DA.png', 10.567, 2.00, '2022-10-26 18:00:00', '2022-10-28 19:00:00', '2022-10-27 13:57:13', '2022-10-27 13:57:13');
+(1, 3, 'EDNL', 'Estructura de Datos No Lineales, asignatura de complejidad avanzada, con respecto a la forma de evaluación tu nota se decidirá entre la media del resultado en un dado de 5 caras y el estado de la luna.', '/img/EDNL.png', 20.123, 0.00, '2022-10-25 00:00:00', '2022-11-25 00:00:00', '2022-10-27 02:57:27', '2022-10-27 02:57:27'),
+(2, 1, 'AEED', 'Análisis De Algoritmos y Estructuras de Datos, esta asignatura te debería iniciar en C++ pero no lo hacemos, creemos que el aprobado solo existe a partir de la tercera matrícula.', '/img/AEED.png', 30.541, 1.20, '2022-10-24 15:00:00', '2022-11-28 19:00:00', '2022-10-27 13:57:13', '2022-10-27 13:57:13'),
+(3, 2, 'POO', 'Programación Orientada a Objetos, asignatura orientada a la enseñanza del paradigma de la programación orientada a objetos, aún siendo así no la impartimos en Java si no que en C++ por motivos aun no conclusos.', '/img/POO.png', 12.567, 3.00, '2022-10-02 15:00:00', '2022-11-28 19:00:00', '2022-10-27 13:57:13', '2022-10-27 13:57:13'),
+(4, NULL, 'DA', 'Diseño de Algoritmos, asignatura muy bien llevada pero si te equivocas en una línea del código el ejercicio esta mal.', '/img/DA.png', 10.567, 2.00, '2022-10-26 18:00:00', '2022-10-28 19:00:00', '2022-10-27 13:57:13', '2022-10-27 13:57:13');
 
 --
 -- Índices para tablas volcadas
