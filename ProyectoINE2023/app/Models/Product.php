@@ -42,4 +42,9 @@ class Product extends Model
         return $this->belongsTo(Company::class);
     }
 
+    //Necesaria, ya que nuestro precio es calculado.
+    public function CalculatedPrice(Product $product){
+        return round(($product->pricePerCredit * ((100-$product->discountPercent)/100))*6,2);
+    }
+
 }

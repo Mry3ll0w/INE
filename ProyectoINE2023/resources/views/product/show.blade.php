@@ -12,7 +12,7 @@
                   <h5 class='card-title d-flex justify-content-center'> {{$product->name}}</h5>
                   <img class="card-img-top mb-3" src="{{$product->imgUrl}}" />
                   <p class='card-text'>{{$product->description}} </p>
-                  <span style="font-weight:bold;">{{$product->Company->name}} </span>
+                  <span style="font-weight:bold;">Creada por: {{$product->Company->name}} </span>
                 </div>
                 @if ($product->HasDiscount($product))
                   <h5 class="card-footer m-2 border d-flex justify-content-center">
