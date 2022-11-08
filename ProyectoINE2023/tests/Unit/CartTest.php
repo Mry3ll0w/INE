@@ -29,9 +29,15 @@ class CartTest extends TestCase
         $product = new Product();
         $aProducts = $product->Offerings();
         //dd($cart->htItems);
+        $dPriceSum = 0;
         foreach($aProducts as $i){
             $cart->add($i);
+            $dPriceSum +=$i->CalculatedPrice($i);
         }
+        
+        //Comprobamos la longitud del carrito (si todo esta correcto tiene que tener 3 elementos)
+        $this->assertTrue(count($cart->htItem) == $cart->iTotalItems);
+        $this->assertTrue($dPriceSum == $cart->dTotalPrice);
 
     }
     
