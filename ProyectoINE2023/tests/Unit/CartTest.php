@@ -40,5 +40,28 @@ class CartTest extends TestCase
         $this->assertTrue($dPriceSum == $cart->dTotalPrice);
 
     }
+
+    public function testRemoveAll(){
+        //Inicializamos el carrito y metemos algunos elemento en el
+        $cart = new Cart();
+        $product = new Product();
+        $aProducts = $product->Offerings();
+        
+        $dPriceSum = 0;
+        foreach($aProducts as $i){
+            $cart->add($i);
+            $dPriceSum +=$i->CalculatedPrice($i);
+        }
+        $eliminatedProduct = $aProducts[0];
+        $dPriceSum -= $eliminatedProduct->CalculatedPrice($eliminatedProduct);
+        //Lo borramos y comprobamos que los elementos sean eliminados
+        $cart->RemoveAll($eliminatedProduct);
+        
+        $this->assertTrue(count($cart->htItem) == 2);
+        $this->assertTrue($cart->iTotalItems == 2);
+        $this->assertTrue($dPriceSum == $cart->dTotalPrice);
+        //! Falta comprobar resta de precio del producto del total
+       
+    }
     
 }

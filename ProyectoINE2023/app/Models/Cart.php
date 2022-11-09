@@ -38,25 +38,25 @@ class Cart extends Model
         }
         $this->iTotalItems ++;
         $this->dTotalPrice += $product->CalculatedPrice($product);
-        // ! ARREGLAR ASSERTS DEL TEST
+        
     }
 
     public function RemoveAll(Product $product){
         if($product != null){
-            unset($htItem[$product->id]);
-            $dTotalPrice = 0;
-            $iTotalItems = 0;
+            $this->iTotalItems --;//Sacamos del total de elementos 1 de los productos
+            $this->dTotalPrice -= $product->CalculatedPrice($product) * $this->htItem[$product->id]['quantity'];
+            unset($this->htItem[$product->id]);
         }
     }
 
     public function Remove(){
-        if(array_key_exists($product->id, $htItem)){
-            if($htItem[$product->id]['quantity'] > 0)
-                $htItem[$product->id]['quantity'] --;
+        if(array_key_exists($product->id, $this->$htItem)){
+            if($this->htItem[$product->id]['quantity'] > 0)
+                $this->htItem[$product->id]['quantity'] --;
             else
-                $htItem[$product->id]['quantity'] = 0;
-            $iTotalItems --;
-            $dTotalPrice -= $htItem[$product->id]['price'];
+                $this->htItem[$product->id]['quantity'] = 0;
+            $this->iTotalItems --;
+            $this->dTotalPrice -= $htItem[$product->id]['price'];
         }
     }
 
