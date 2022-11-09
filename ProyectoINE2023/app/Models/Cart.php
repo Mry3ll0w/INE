@@ -49,14 +49,14 @@ class Cart extends Model
         }
     }
 
-    public function Remove(){
-        if(array_key_exists($product->id, $this->$htItem)){
+    public function Remove(Product $product){
+        if(array_key_exists($product->id, $this->htItem)){
             if($this->htItem[$product->id]['quantity'] > 0)
                 $this->htItem[$product->id]['quantity'] --;
             else
                 $this->htItem[$product->id]['quantity'] = 0;
-            $this->iTotalItems --;
-            $this->dTotalPrice -= $htItem[$product->id]['price'];
+            
+            $this->dTotalPrice -= $this->htItem[$product->id]['price'];
         }
     }
 

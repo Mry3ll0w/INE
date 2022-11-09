@@ -44,7 +44,7 @@ class Product extends Model
 
     //Necesaria, ya que nuestro precio es calculado.
     public function CalculatedPrice(Product $product){
-        return round(($product->pricePerCredit * ((100-$product->discountPercent)/100))*6,2);
+        return round(($this->pricePerCredit * ((100-$this->discountPercent)/100))*6,2);
     }
 
 }
