@@ -12,7 +12,14 @@
                   <h5 class='card-title d-flex justify-content-center'> {{$product->name}}</h5>
                   <img class="card-img-top mb-3" src="{{$product->imgUrl}}" />
                   <p class='card-text'>{{$product->description}} </p>
-                  <span style="font-weight:bold;">Creada por: {{$product->Company->name}} </span>
+                  <div class='d-flex row'>
+                    <span style="font-weight:bold;">Creada por: {{$product->Company->name}} </span>
+                    <div class="d-flex justify-content-center">
+                      <a href='{{ route('cart.add', $product ->id) }}' type="button" class="btn btn-primary mt-3">
+                        Añadir al carro
+                      </a>
+                    </div>
+                  </div>
                 </div>
                 @if ($product->HasDiscount($product))
                   <h5 class="card-footer m-2 border d-flex justify-content-center">
@@ -24,6 +31,7 @@
                   <h5 class="card-footer m-2 border d-flex justify-content-center">
                     <span style="font-weight:bold;">{{round($product->pricePerCredit * 6,2)}}€ </span>   
                 @endif
+              
           </div>
         </div>
       </div>

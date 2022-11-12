@@ -60,7 +60,7 @@ class CartTest extends TestCase
         $this->assertTrue(count($cart->htItem) == 2);
         $this->assertTrue($cart->iTotalItems == 2);
         $this->assertTrue($dPriceSum == $cart->dTotalPrice);
-        //! Falta comprobar resta de precio del producto del total
+        
     }
 
     public function testRemove(){
