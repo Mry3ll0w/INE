@@ -24,7 +24,7 @@
   
     <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="#"><i class="fa-solid fa-shop me-2"></i> <strong>UCA SHOP</strong></a>
+        <a class="navbar-brand" href="/"><i class="fa-solid fa-shop me-2"></i> <strong>UCA SHOP</strong></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -58,7 +58,12 @@
           </ul>
           <ul class="navbar-nav ms-auto ">
             <li class="nav-item">
-              <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-cart-shopping me-1"></i> Carrito</a>
+              <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-cart-shopping me-1"></i>
+                <img src="https://img.icons8.com/dotty/30/null/shopping-cart.png"/> 
+                <span> 
+                  {{session()->get('cart')->iTotalItems}}
+                </span>
+              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-circle-user me-1"></i> Mi cuenta</a>

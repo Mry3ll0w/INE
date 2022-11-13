@@ -25,7 +25,7 @@ class Cart extends Model
     public function add(Product $product){
         
         if(array_key_exists($product->id, $this->htItem)){
-            $htItem[$product->id]['quantity']++;
+            $this->htItem[$product->id]['quantity']++;
         }
         else{
             $this->htItem[$product->id] =  array(
@@ -35,8 +35,9 @@ class Cart extends Model
                 'price' => $product->CalculatedPrice($product),
                 'imgUrl' => $product->imgUrl
             );
+            $this->iTotalItems ++;
         }
-        $this->iTotalItems ++;
+        
         $this->dTotalPrice += $product->CalculatedPrice($product);
         
     }
