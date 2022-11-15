@@ -24,7 +24,6 @@ class ProductController extends Controller
             $cart->add($product);
             $request->session()->put('cart',$cart);
             $success = 'El producto ha sido añadido al carro.';  
-            dd($cart); 
         }
         else{
             $cart = new Cart();

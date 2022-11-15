@@ -58,10 +58,13 @@
           </ul>
           <ul class="navbar-nav ms-auto ">
             <li class="nav-item">
-              <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-cart-shopping me-1"></i>
-                <img src="https://img.icons8.com/dotty/30/null/shopping-cart.png"/> 
-                <span> 
-                  {{session()->get('cart')->iTotalItems}}
+              <a class="nav-link mx-2 text-uppercase" href="/cart"><i class="fa-solid fa-cart-shopping me-1"></i>
+                <img src="https://img.icons8.com/dotty/30/null/shopping-cart.png" > 
+                <span>
+                  @if (session()->get('cart') !== null)
+                    {{session()->get('cart')->iTotalItems}}
+                  @endif 
+                  
                 </span>
               </a>
             </li>
