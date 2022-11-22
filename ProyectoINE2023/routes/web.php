@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/", [ProductController::class, "welcome"])->name("home");
 
+Route::get("/user/logout", [UserController::class, "logout"])->name("logout");
+
 Route::get("/cart", [CartController::class, "show"])->name("cart.show");
 Route::get('/cart/{operation}/{product}',[CartController::class, 'operation'])
     ->name('cart.operation');

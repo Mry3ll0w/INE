@@ -68,21 +68,28 @@
                 </span>
               </a>
             </li>
-            <li class="nav-item">
               
                 @if (Auth::check())
-                  <a class="nav-link mx-2 text-uppercase" href="/dashboard">
-                    <i class="fa-solid fa-circle-user me-1"></i> 
-                    {{ Auth::user()->name }} 
-                    <span class=""> 
-                      <img src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/40/000000/external-webpage-log-out-of-personal-account-layout-web-filled-tal-revivo.png"/>
-                    </span>
-                  </a>
+                  <div class="row">
+                    <li class="nav-item">
+                    <a class="nav-link mx-2 mt-1 text-uppercase" href="/dashboard">
+                      <i class="fa-solid fa-circle-user me-1"></i> 
+                      {{ Auth::user()->name }} 
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="/user/logout">
+                        <span class="ms-1"> 
+                          <img src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/20/000000/external-webpage-log-out-of-personal-account-layout-web-filled-tal-revivo.png"/>
+                        </span>
+                      </a>
+                    </li>
+                  </div>
                 @else
                   <a class="nav-link mx-2 text-uppercase" href="/login">
                     <i class="fa-solid fa-circle-user me-1"></i>Autenticación</a>
                 @endif
-            </li>
+            
           </ul>
         </div>
       </div>
