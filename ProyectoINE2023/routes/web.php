@@ -17,17 +17,25 @@ Route::get("/", [ProductController::class, "welcome"])->name("home");
 
 Route::get("/user/logout", [UserController::class, "logout"])->name("logout");
 
+Route::get("/user", [UserController::class, "edit"])->name("user.edit");
+
+Route::patch("/user", [UserController::class, "update"])->name("user.update");
+
 Route::get("/cart", [CartController::class, "show"])->name("cart.show");
-Route::get('/cart/{operation}/{product}',[CartController::class, 'operation'])
-    ->name('cart.operation');
+Route::get("/cart/{operation}/{product}", [
+    CartController::class,
+    "operation",
+])->name("cart.operation");
 Route::get("/cart", [CartController::class, "show"])->name("cart.show");
 
-Route::get('/product/{product}',
-    [ProductController::class, 'show'])->name('product.show');
+Route::get("/product/{product}", [ProductController::class, "show"])->name(
+    "product.show"
+);
 
-Route::get('/addToCart/{product}',
-    'App\Http\Controllers\ProductController@addToCart')
-        ->name('cart.add');
+Route::get(
+    "/addToCart/{product}",
+    "App\Http\Controllers\ProductController@addToCart"
+)->name("cart.add");
 
 Route::middleware([
     "auth:sanctum",

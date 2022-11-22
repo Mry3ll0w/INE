@@ -72,7 +72,7 @@
                 @if (Auth::check())
                   <div class="row">
                     <li class="nav-item">
-                    <a class="nav-link mx-2 mt-1 text-uppercase" href="/dashboard">
+                    <a class="nav-link mx-2 mt-1 text-uppercase" href={{ route('user.edit') }}>
                       <i class="fa-solid fa-circle-user me-1"></i> 
                       {{ Auth::user()->name }} 
                     </a>
