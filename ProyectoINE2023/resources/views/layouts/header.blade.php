@@ -69,7 +69,19 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-circle-user me-1"></i> Mi cuenta</a>
+              
+                @if (Auth::check())
+                  <a class="nav-link mx-2 text-uppercase" href="/dashboard">
+                    <i class="fa-solid fa-circle-user me-1"></i> 
+                    {{ Auth::user()->name }} 
+                    <span class=""> 
+                      <img src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/40/000000/external-webpage-log-out-of-personal-account-layout-web-filled-tal-revivo.png"/>
+                    </span>
+                  </a>
+                @else
+                  <a class="nav-link mx-2 text-uppercase" href="/login">
+                    <i class="fa-solid fa-circle-user me-1"></i>Autenticación</a>
+                @endif
             </li>
           </ul>
         </div>

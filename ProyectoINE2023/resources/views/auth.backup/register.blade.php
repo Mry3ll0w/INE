@@ -1,8 +1,7 @@
-@extends('templates.master')
-@section('contenido')
-<div class="container d-flex m-4">
+<x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
+            <x-jet-authentication-card-logo />
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -33,9 +32,10 @@
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                 <div class="mt-4">
                     <x-jet-label for="terms">
-                        <div class="flex items-center"> 
+                        <div class="flex items-center">
+                            <x-jet-checkbox name="terms" id="terms"/>
+
                             <div class="ml-2">
-                                <x-jet-checkbox name="terms" id="terms"/>
                                 {!! __('auth.I agree to the :terms_of_service and :privacy_policy', [
                                         'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'" class="underline text-sm text-gray-600 hover:text-gray-900">'.__('auth.Terms of Service').'</a>',
                                         'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'" class="underline text-sm text-gray-600 hover:text-gray-900">'.__('auth.Privacy Policy').'</a>',
@@ -51,11 +51,10 @@
                     {{ __('auth.Already registered?') }}
                 </a>
 
-                <x-jet-button class="btn btn-primary ms-4">
+                <x-jet-button class="ml-4">
                     {{ __('auth.Register') }}
                 </x-jet-button>
             </div>
         </form>
     </x-jet-authentication-card>
-</div>
-@endsection
+</x-guest-layout>

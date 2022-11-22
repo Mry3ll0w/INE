@@ -1,8 +1,7 @@
-@extends('templates.master')
-@section('contenido')
-<div class="container d-flex mt-5 justify-content-center">
+<x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
+            <x-jet-authentication-card-logo />
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -40,12 +39,10 @@
                     </a>
                 @endif
 
-                <x-jet-button class="btn btn-primary ms-4">
+                <x-jet-button class="ml-4">
                     {{ __('auth.Log in') }}
                 </x-jet-button>
-                <a class="btn btn-primary" href="{{ route('register') }}"> Registro </a>
             </div>
         </form>
     </x-jet-authentication-card>
-</div>
-@endsection
+</x-guest-layout>
