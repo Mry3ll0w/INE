@@ -14,11 +14,22 @@
                   <p class='card-text'>{{$product->description}} </p>
                   <div class='d-flex row'>
                     <span style="font-weight:bold;">Creada por: {{$product->Company->name}} </span>
-                    <div class="d-flex justify-content-center">
-                      <a href='{{ route('cart.add', $product ->id) }}' type="button" class="btn btn-primary mt-3">
-                        Añadir al carro
-                      </a>
+                    <div class="col">
+                      <div class="d-flex justify-content-center">
+                        <a href='{{ route('cart.add', $product ->id) }}' type="button" class="btn btn-primary mt-3">
+                          Añadir al carro
+                        </a>
+                      </div>
                     </div>
+                    @if(Auth::user()->isEditor(Auth::user()))
+                    <div class="col">
+                      <div class="d-flex justify-content-center">
+                        <a href='{{ route('product.edit', $product) }}' type="button" class="btn btn-primary mt-3">
+                          Editar Producto
+                        </a>
+                      </div>
+                    </div>
+                    @endif
                   </div>
                 </div>
                 @if ($product->HasDiscount($product))

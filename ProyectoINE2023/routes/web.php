@@ -19,6 +19,11 @@ Route::get("/user/logout", [UserController::class, "logout"])->name("logout");
 
 Route::get("/user", [UserController::class, "edit"])->name("user.edit");
 
+Route::patch("/product/{product}", [ProductController::class, "update"])->name("product.update");
+
+Route::get("/product/edit/{product}", [ProductController::class, "edit"])->name("product.edit");
+
+
 Route::patch("/user", [UserController::class, "update"])->name("user.update");
 
 Route::get("/cart", [CartController::class, "show"])->name("cart.show");
@@ -36,6 +41,11 @@ Route::get(
     "/addToCart/{product}",
     "App\Http\Controllers\ProductController@addToCart"
 )->name("cart.add");
+
+Route::middleware(['role.editor'])->group(function () {
+    Route::patch("/product/{product}", [ProductController::class, "update"])->name("product.update");
+    Route::get("/product/edit/{product}", [ProductController::class, "edit"])->name("product.edit");    
+});
 
 Route::middleware([
     "auth:sanctum",

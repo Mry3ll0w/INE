@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Cart;
+use App\Models\Company;
 
 class ProductController extends Controller
 {
@@ -31,7 +32,23 @@ class ProductController extends Controller
             $request->session()->put('cart',$cart);
             $success = 'El producto ha sido añadido al carro.';   
         }
-            // ! PREGUNTAR SI ES CORRECTO ASI
         return view('product.show',compact('product', 'success'));
     }
+
+    public function update(Product $product, Request $request){
+        $aCompany = Company::all();
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->company_id = $request->company_id; 
+        $product->save();
+        return view('product.edit',compact('product', 'aCompany'));
+    }
+
+    public function edit(Product $product){
+        $aCompany = Company::all();
+        return view('product.edit', compact('product', 'aCompany'));
+    }
+
+   
+
 }

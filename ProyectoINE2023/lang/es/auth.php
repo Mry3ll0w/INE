@@ -31,5 +31,7 @@ return [
     'Old password' => 'Antigua Contraseña',
     'New password' => 'Nueva Contraseña',
     'Repeat password' => 'Repita la Contraseña',
-    'Save' => 'Guardar'
+    'Save' => 'Guardar',
+    'Company' => 'Compañía',
+    'DoSelect' => 'Selecciona la compañia'
 ];
