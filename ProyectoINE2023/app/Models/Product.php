@@ -22,7 +22,8 @@ class Product extends Model
     }
     
     static function Offerings(){
-        //si la fecha de hoy es menor o igual a la fecha caducidad de la oferta y mayor a la caducidad del inicio de la oferta
+        //si la fecha de hoy es menor o igual a la fecha caducidad de la oferta 
+        //y mayor a la caducidad del inicio de la oferta
         $sNow = date('Y-m-d H:i:s');
 
         return Product::where(DB::raw(
