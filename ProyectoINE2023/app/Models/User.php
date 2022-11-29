@@ -60,6 +60,6 @@ class User extends Authenticatable
     ];
 
     public static function isEditor(User $user){
-        return $user != null && $user->current_team_id == 3;
+        return $user != null && $user->current_team_id == 4;
     }
 }
